@@ -8,12 +8,12 @@
 /// 3. System register at port $FF (drive select, side, etc.).
 ///
 /// Integrates with each host machine through the `Peripheral` trait
-/// from `common-sinclair-zx-spectrum::peripheral`. Phase 0.7 moved
+/// from `emu198x-bus-sinclair-zx-spectrum`. Phase 0.7 moved
 /// `claims_port`, `read`, `write`, and `on_m1` out of inherent
 /// methods and onto the trait, so Pentagon and Scorpion (and any
 /// future host that wires in a Beta disk) drive the interface
 /// uniformly.
-use common_sinclair_zx_spectrum::peripheral::Peripheral;
+use emu198x_bus_sinclair_zx_spectrum::Peripheral;
 
 /// TRD disk geometry.
 const SECTORS_PER_TRACK: usize = 16;
